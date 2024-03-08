@@ -30,6 +30,13 @@ def HO_tune_shift(N, normalized_emittance, geometrical_factor):
 def beam_radius_IP(beta_star_m, geometrical_emittance):
     return np.sqrt(beta_star_m*geometrical_emittance)
 
+
+def luminosity_loss_rate(bunch_intensity, number_of_bunches, luminosity, sigma_eff = 110e-31):
+    return ((2 * luminosity**2 * sigma_eff) / (bunch_intensity*number_of_bunches))
+
+def L_dLdt_hours(bunch_intensity, number_of_bunches, luminosity, sigma_eff = 110e-31):
+    return luminosity/luminosity_loss_rate(bunch_intensity, number_of_bunches, luminosity, sigma_eff = sigma_eff)/3600.0
+
 def print_it(my_string):
     print(my_string)
     print(40*'*')
@@ -55,6 +62,9 @@ def print_it(my_string):
     print('Beam Radius at IP: ', beam_radius_IP(beta_star_m, geometrical_emittance(emittance_normalized, energy_total_Gev))*1e6, 'um')
     print('Geometrical Luminosity Factor: ', geometrical_factor_value)
     print(f'Head-On Tune Shift: {HO_tune_shift(Nb, emittance_normalized, geometrical_factor_value)*1e4}E-4')
+    
+    print(f'SOL L/dL/dt: {L_dldt_hours_SOL}')
+    print(f'EOL L/dL/dt: {L_dldt_hours_EOL}')
 # %% RunIII
 energy_total_Gev = 6800
 beta_star_m = 0.30
@@ -67,6 +77,14 @@ geometrical_factor_value = geometrical_factor(sigma_x(emittance_normalized, beta
 Nb = 1.6e11
 nb = 2464
 frev = 11245
+
+nb_colliding_ip15 = 2752
+bunch_intensity_SOL = 1.6e11
+bunch_intensity_EOL = 1.28e11
+luminosity = 2.1e38
+L_dldt_hours_SOL = L_dLdt_hours(bunch_intensity_SOL, nb_colliding_ip15, luminosity, sigma_eff = 110e-31)
+L_dldt_hours_EOL = L_dLdt_hours(bunch_intensity_EOL, nb_colliding_ip15, luminosity, sigma_eff = 110e-31)
+
 print_it('Run3 Parameters')
 
 # %% HL-LHC
@@ -82,6 +100,13 @@ Nb = 2.2e11
 nb = 2760
 frev = 11245
 crabbing_angle = -190e-6
+
+nb_colliding_ip15 = 2748
+bunch_intensity_SOL = 2.2e11
+bunch_intensity_EOL = 1.22e11
+luminosity = 5e38
+L_dldt_hours_SOL = L_dLdt_hours(bunch_intensity_SOL, nb_colliding_ip15, luminosity, sigma_eff = 110e-31)
+L_dldt_hours_EOL = L_dLdt_hours(bunch_intensity_EOL, nb_colliding_ip15, luminosity, sigma_eff = 110e-31)
 
 print_it('HL-LHC Parameters')
 
