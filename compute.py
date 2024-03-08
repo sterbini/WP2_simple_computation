@@ -73,7 +73,7 @@ print_it('Run3 Parameters')
 energy_total_Gev = 7000
 beta_star_m = 0.15
 emittance_normalized = 2.5e-6
-half_crossing_angle_rad = 500e-6
+half_crossing_angle_rad = 250e-6
 full_crossing_angle_rad = 2*half_crossing_angle_rad
 sigma_z = 0.076
 full_crabbing_angle_rad = -190e-6*2
