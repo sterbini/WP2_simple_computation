@@ -24,6 +24,7 @@ def geometrical_factor(sigma_x_m, full_crossing_angle_rad, sigma_z_m, full_crabb
 def HO_tune_shift(N, normalized_emittance, geometrical_factor):
     # proton classical radius rp
     rp = 1.5347e-18
+    # omitting the '-' sign
     return N*rp/normalized_emittance/4/np.pi*geometrical_factor
 
 def beam_radius_IP(beta_star_m, geometrical_emittance):
