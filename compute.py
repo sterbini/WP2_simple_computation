@@ -78,7 +78,7 @@ Nb = 1.6e11
 nb = 2464
 frev = 11245
 
-nb_colliding_ip15 = 2752
+nb_colliding_ip15 = 2452
 bunch_intensity_SOL = 1.6e11
 bunch_intensity_EOL = 1.28e11
 luminosity = 2.1e38
