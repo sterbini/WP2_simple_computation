@@ -1,0 +1,81 @@
+++++++ Run2 2015 Parameters ++++++
+****************************************
+Assuming the following parameters:
+****************************************
+Total Energy: 6500 GeV
+Beta Star max: 30.0 cm
+Beta Star min: 25.0 cm
+Normalized Emittance: 2.0999999999999996 um
+Half Crossing Angle: 160.0 urad
+Sigma Z: 0.08 m
+Nb: 11.0E10 ppb
+nb: 2556 bunches
+frequency of revolution: 11245 Hz
+full crabbing angle: 0.0 urad
+****************************************
+We get the following results: 
+****************************************
+Beam Current:  506.5512462261622 mA
+Geometrical Emittance:  0.30313403392740074 nm
+Min Beam Radius at IP:  8.705372391911226 um
+Geometrical Luminosity Factor:  0.5974411483420353
+Head-On Tune Shift: 38.219249135280705E-4
+SOL L/dL/dt: 16.825396825396826
+EOL L/dL/dt: 13.766233766233766
+
+
+
+++++++ Run3 2022 Parameters ++++++
+****************************************
+Assuming the following parameters:
+****************************************
+Total Energy: 6800 GeV
+Beta Star max: 120.0 cm
+Beta Star min: 30.0 cm
+Normalized Emittance: 2.0999999999999996 um
+Half Crossing Angle: 160.0 urad
+Sigma Z: 0.097 m
+Nb: 16.0E10 ppb
+nb: 2464 bunches
+frequency of revolution: 11245 Hz
+full crabbing angle: 0.0 urad
+****************************************
+We get the following results: 
+****************************************
+Beam Current:  710.2815596535859 mA
+Geometrical Emittance:  0.28976047334658184 nm
+Min Beam Radius at IP:  9.32352626445459 um
+Geometrical Luminosity Factor:  0.7686105634280341
+Head-On Tune Shift: 71.51887361488022E-4
+SOL L/dL/dt: 24.76767676767677
+EOL L/dL/dt: 19.814141414141417
+
+
+
+++++++ HL-LHC Parameters ++++++
+****************************************
+Assuming the following parameters:
+****************************************
+Total Energy: 7000 GeV
+Beta Star max: 100.0 cm
+Beta Star min: 15.0 cm
+Normalized Emittance: 2.2 um
+Half Crossing Angle: 250.0 urad
+Sigma Z: 0.076 m
+Nb: 22.0E10 ppb
+nb: 2760 bunches
+frequency of revolution: 11245 Hz
+full crabbing angle: -380.0 urad
+****************************************
+We get the following results: 
+****************************************
+Beam Current:  1093.9604378593176 mA
+Geometrical Emittance:  0.2948854883633033 nm
+Min Beam Radius at IP:  6.650776139255891 um
+Geometrical Luminosity Factor:  0.9665043068248166
+Head-On Tune Shift: 118.03679878652753E-4
+SOL L/dL/dt: 15.26666666666667
+EOL L/dL/dt: 8.466060606060609
+
+
+
