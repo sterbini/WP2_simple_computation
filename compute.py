@@ -35,7 +35,8 @@ def luminosity_loss_rate(bunch_intensity, number_of_bunches, luminosity, sigma_e
     return ((2 * luminosity**2 * sigma_eff) / (bunch_intensity*number_of_bunches))
 
 def L_dLdt_hours(bunch_intensity, number_of_bunches, luminosity, sigma_eff = 110e-31):
-    return luminosity/luminosity_loss_rate(bunch_intensity, number_of_bunches, luminosity, sigma_eff = sigma_eff)/3600.0
+    # factor of 2 needed due to IP1 and IP5
+    return luminosity/(2.0*luminosity_loss_rate(bunch_intensity, number_of_bunches, luminosity, sigma_eff = sigma_eff))/3600.0
 
 def print_it(my_string):
     print(6*'+', my_string, 6*'+')
@@ -138,4 +139,10 @@ L_dldt_hours_EOL = L_dLdt_hours(bunch_intensity_EOL, nb_colliding_ip15, luminosi
 
 print_it('HL-LHC Parameters')
 
+# Run 2
+nb_colliding_ip15 = 2544
+bunch_intensity_SOL = 1.1e11
+luminosity = 2.1e38
+L_dldt_hours_SOL = L_dLdt_hours(bunch_intensity_SOL, nb_colliding_ip15, luminosity, sigma_eff = 110e-31)
+print("Run 2 SOL L/dL/dt: " ,L_dldt_hours_SOL)
 # %%
